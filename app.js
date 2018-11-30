@@ -1,3 +1,4 @@
+var dbSetup = require('./DBSettings/dbSetup').connect();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -6,6 +7,7 @@ var logger = require('morgan');
 
 var viewRouter = require('./routes/ViewRouter/ViewRouter');
 var apiRouter = require('./routes/ApiRouter/ApiRouter');
+var graphQL = require('./routes/GraphQL/graphQL');
 var app = express();
 
 // view engine setup
@@ -18,7 +20,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// routing setup
 app.use('/', viewRouter);
+app.use('/graphql', graphQL);
 app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler

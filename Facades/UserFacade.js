@@ -3,9 +3,9 @@ var User = require('../Models/User');
 
 const getAllUsers = () => User.find({}).exec();
 
-const addUser = (firstname, lastname, username, password, email) => new User(firstname, lastname, username, password, email).save();
+const addUser = (firstName, lastName, userName, password) => new User({firstName, lastName, userName, password}).save();
 
-const findByUsername = username => User.findOne({username:username}).exec();
+const findByUsername = username => User.findOne({userName:username}).exec();
 
 const getUserById = id => User.findById({_id:id}).exec();
 

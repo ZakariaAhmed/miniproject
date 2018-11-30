@@ -1,28 +1,33 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var Job = require('./Job');
+
+var JobSchema = new Schema({
+    type: String,
+    company: String,
+    companyUrl : String
+});
 
 var UserSchema = new Schema({
-    username: {type: String, unique: true, required: true},
-    firstname : String,
-    lastname : String,
+    userName: {type: String, unique: true, required: true},
+    firstName : String,
+    lastName : String,
     password : {type: String, required: true},
-    email: {type: String, required: true},
+    // email: {type: String, required: true},
     //Observe embedding
-    job : [job],
+    job : [JobSchema],
     created: {type: Date, default: Date.now},
     lastUpdated : Date
-})
+});
 
-UserSchema.pre("save",function(next){
+UserSchema.pre("save", (next) => {
     this.password = "hash_me_and_add_some_salt "+this.password;
     this.lastUpdated = new Date();
     next();
-})
+});
 
-UserSchema.pre("update",function(next){
+UserSchema.pre("update",(next) => {
     this.update({},{$set : {lastUpdated: new Date()}});
     next();
-})
+});
 
 module.exports = mongoose.model("User",UserSchema);
