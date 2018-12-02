@@ -20,11 +20,15 @@ const findFriends = (point, dist) => {
 const login = async (username, password, longitude, latitude, distance) => {
     var user = await findByUserName(username);
     // User Validation
-    if (user == null || user.password !== password) {
+    if (user == null || password !== user.password) {
         throw {msg: "wrong username or password", status: 403}
     }
-    // else we logged in, update users position
 
+    if (longitude == null || latitude == null || distance == null) {
+        throw {msg: "Error: did not get Longitude, latitude, or distance", status: 500}
+    }
+
+    // else we logged in, update users position
     const point =  {'type': "Point", coordinates:[longitude,latitude]};
     Position.findOneAndUpdate({user:user._id},{created:Date.now(),loc:point},{new:true,upsert:true}).exec();
 

@@ -1,14 +1,17 @@
-var dbSetup = require('./DBSettings/dbSetup').connect();
+var DB_URI = require("./DBSettings/Settings").TEST_DB_URI;
+var dbSetup = require('./DBSettings/dbSetup').connect(DB_URI);
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var cors = require('cors')
 var viewRouter = require('./routes/ViewRouter/ViewRouter');
 var apiRouter = require('./routes/ApiRouter/ApiRouter');
 var graphQL = require('./routes/GraphQL/graphQL');
 var app = express();
+const graphqlHTTP = require('express-graphql');
+const schema = require('./schema');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -19,13 +22,26 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(cors())
 // routing setup
 app.use('/', viewRouter);
 app.use('/graphql', graphQL);
 app.use('/api', apiRouter);
 
-// catch 404 and forward to error handler
+// create a resolver
+const root = {hello: () => "Hi, I'm Manny"};
+
+app.use('/graph', graphqlHTTP({
+    schema:schema,
+    rootValue:root,
+    graphiql:true
+}));
+
+
+
+
+
+// catch 404 and forward to error hanldler
 app.use(function(req, res, next) {
   next(createError(404));
 });

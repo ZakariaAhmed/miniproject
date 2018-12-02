@@ -1,8 +1,10 @@
 var express = require('express');
 var userRouter = express.Router();
+var userFacade = require("../../../Facades/UserFacade");
 
 userRouter.get('/', async (req, res, next) => {
-    res.json({'firstName':'Zakaria'});
+    let users = await userFacade.getAllUsers();
+    res.json(users);
 });
 
 
