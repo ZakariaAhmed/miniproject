@@ -5,6 +5,8 @@ dbSetup.connect(Test_DB);
 var User = require('../Models/User');
 var LocationBlog = require("../Models/LocationBlog");
 var Position = require("../Models/Position");
+var userFacade = require("../Facades/UserFacade");
+
 
 function userCreate(firstName,lastName,userName,password,type,company,companyUrl){
     var job = [{type,company,companyUrl},{type,company,companyUrl}];
@@ -84,7 +86,9 @@ async function createUsersForLocationTest(){
         positionCreator(12.515734, 55.646729,users[3]._id,true),
     ]
     var positions = await Promise.all(posPromises);
-    console.log(positions);
+    var nUser = await userFacade.getUserById(users[0]._id);
+    console.log(nUser.lastName);
+
 }
 //createUsers();
 

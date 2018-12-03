@@ -3,11 +3,12 @@ const userFacade = require('../Facades/UserFacade');
 
 const resolvers = {
     Query: {
-        getUserById: ({ id }) => userFacade.getUserById(id),
+        getUserById: (obj, args) => userFacade.getUserById(args.id)
+        ,
         getAllUsers: () => userFacade.getAllUsers()
     },
     Mutation: {
-        addUser: ({input}) => userFacade.addUser(input.firstName, input.lastName, input.userName, input.password)
+        addUser: (root,{input}) => userFacade.addUser(input.firstName, input.lastName, input.userName, input.password)
     }
 };
 

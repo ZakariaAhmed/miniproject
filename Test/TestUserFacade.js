@@ -6,7 +6,8 @@ describe("Testing User Facade", () =>{
 
     it("It should find all users created in make test data", async () =>{
         let users = await userFacade.getAllUsers();
-        expect(users.length).to.be.equal(5);
+
+        expect(users.length).to.equal(5);
     });
 
     it("Add A User", async () =>{
@@ -16,7 +17,14 @@ describe("Testing User Facade", () =>{
 
     it("Should Find Kurt Wonnegut", async () => {
         var user = await userFacade.findByUsername("Swimmer1");
-        expect(user.firstName).to.be.equal("Kurt");
+        console.log(user._id);
+
+        expect(user.firstName).to.equal("Kurt");
     });
+
+
+
+
+
 
 });
