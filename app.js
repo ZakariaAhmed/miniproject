@@ -1,4 +1,4 @@
-var DB_URI = require("./DBSettings/Settings").TEST_DB_URI;
+var DB_URI = require("./DBSettings/Settings").MLAB_URI;
 var dbSetup = require('./DBSettings/dbSetup').connect(DB_URI);
 var createError = require('http-errors');
 var express = require('express');
