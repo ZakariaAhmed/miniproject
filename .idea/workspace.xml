@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a978c9fa-1529-4d25-9eee-3ac535aa7991" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateDataScripts/MakeTestData.js" beforeDir="false" afterPath="$PROJECT_DIR$/CreateDataScripts/MakeTestData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Facades/UserFacade.js" beforeDir="false" afterPath="$PROJECT_DIR$/Facades/UserFacade.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestUserFacade.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestUserFacade.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/resolvers.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/resolvers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,7 +20,16 @@
         <entry file="file://$PROJECT_DIR$/data/resolvers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="118" selection-start-line="10" selection-start-column="118" selection-end-line="10" selection-end-column="118" />
+              <caret line="10" column="118" lean-forward="true" selection-start-line="10" selection-start-column="118" selection-end-line="10" selection-end-column="118" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/GraphQL/graphQL.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -33,17 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/typeDefs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Facades/UserFacade.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="165">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -86,8 +81,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="6" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="980" />
@@ -120,17 +114,19 @@
             <path>
               <item name="miniproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="miniproject" type="462c0819:PsiDirectoryNode" />
-              <item name="Facades" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="miniproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="miniproject" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="GraphQL" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="miniproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="miniproject" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewRouter" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -174,18 +170,24 @@
       <workItem from="1543575105248" duration="5034000" />
       <workItem from="1543659406753" duration="4120000" />
       <workItem from="1543742186852" duration="9346000" />
-      <workItem from="1543824609810" duration="3778000" />
+      <workItem from="1543824609810" duration="3884000" />
+      <workItem from="1543835327491" duration="4000" />
+      <workItem from="1543845123085" duration="219000" />
+      <workItem from="1543907463886" duration="447000" />
+      <workItem from="1543941776748" duration="106000" />
+      <workItem from="1545219354248" duration="2309000" />
+      <workItem from="1545304369012" duration="553000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29596000" />
+    <option name="totallyTimeSpent" value="33340000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="979" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="980" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18022905" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18509468" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -197,11 +199,12 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.52353615" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.5229358" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Google Cloud Storage" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,13 +275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Facades/LoginFacade.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -308,27 +304,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/TestLoginFacade.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/GraphQL/graphQL.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/TestUserFacade.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CreateDataScripts/MakeTestData.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -339,21 +314,49 @@
     <entry file="file://$PROJECT_DIR$/Facades/UserFacade.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Facades/LoginFacade.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/TestUserFacade.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/TestLoginFacade.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/typeDefs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        <state relative-caret-position="165">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/GraphQL/graphQL.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/resolvers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="118" selection-start-line="10" selection-start-column="118" selection-end-line="10" selection-end-column="118" />
+          <caret line="10" column="118" lean-forward="true" selection-start-line="10" selection-start-column="118" selection-end-line="10" selection-end-column="118" />
         </state>
       </provider>
     </entry>
