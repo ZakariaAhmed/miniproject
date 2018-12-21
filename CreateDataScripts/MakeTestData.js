@@ -66,16 +66,19 @@ async function createUsers(){
 
 
 async function createUsersForLocationTest(){
+
+    try {
+
     await User.remove({});
     await Position.remove({});
     await LocationBlog.remove({});
 
     var userPromises = [
         userCreate("Kurt","Wonnegut","Swimmer1","test", "xxx","comp","comp.url"),
-        userCreate("Peter","Hansen","Swimmer2","test","xxx","comp","comp.url"),
-        userCreate("Helle","Olsen","Runner1","test","xxx","comp","comp.url"),
-        userCreate("Janne","Johnson","Runner11","test","xxx","comp","comp.url"),
-        userCreate("Tester","Testesen","Tester","test","xxx","comp","comp.url"),
+        userCreate("Peter","Hansen","Swimmer2","test2","xxx","comp","comp.url"),
+        userCreate("Helle","Olsen","Runner1","test3","xxx","comp","comp.url"),
+        userCreate("Janne","Johnson","Runner11","test4","xxx","comp","comp.url"),
+        userCreate("Tester","Testesen","Tester","test5","xxx","comp","comp.url"),
     ]
     var users = await Promise.all(userPromises);
 
@@ -88,9 +91,16 @@ async function createUsersForLocationTest(){
     var positions = await Promise.all(posPromises);
     var nUser = await userFacade.getUserById(users[0]._id);
     console.log(nUser.lastName);
+        
+    } catch (error) {
+        console.log(error);
+    }
+
 
 }
 //createUsers();
+
+//createUsersForLocationTest();
 
 module.exports = createUsersForLocationTest;
 
