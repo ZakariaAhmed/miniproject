@@ -28,16 +28,6 @@ app.use('/', viewRouter);
 app.use('/graphql', graphQL);
 app.use('/api', apiRouter);
 
-// create a resolver
-const root = {hello: () => "Hi, I'm Manny"};
-
-app.use('/graph', graphqlHTTP({
-    schema:schema,
-    rootValue:root,
-    graphiql:true
-}));
-
-
 
 
 
